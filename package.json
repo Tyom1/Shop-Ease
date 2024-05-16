@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "type": "module",
   "scripts": {
-    "lint:css": "stylelint \"src/**/*.scss\"",
+    "lint:css": "stylelint \"src/**/*.{vue,scss}\"",
     "dev": "npm run lint:css && vite",
     "build": "vue-tsc && vite build",
     "preview": "vite preview"
