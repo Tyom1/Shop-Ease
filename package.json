@@ -4,7 +4,8 @@
   "version": "0.0.1",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "lint:css": "stylelint \"src/**/*.scss\"",
+    "dev": "npm run lint:css && vite",
     "build": "vue-tsc && vite build",
     "preview": "vite preview"
   },
@@ -22,6 +23,9 @@
     "eslint": "^8.57.0",
     "prettier": "3.2.5",
     "sass": "^1.77.0",
+    "stylelint": "^16.5.0",
+    "stylelint-config-standard": "^36.0.0",
+    "stylelint-scss": "^6.3.0",
     "typescript": "^5.2.2",
     "vite": "^5.2.0",
     "vue-tsc": "^2.0.6"
