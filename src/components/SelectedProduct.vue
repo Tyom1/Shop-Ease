@@ -135,7 +135,7 @@ onMounted(() => {
     overflow: hidden;
     border-radius: 15px;
 
-    @media (max-width: 768px) {
+    @media (max-width <=768px) {
       max-height: 100%;
     }
   }
@@ -179,6 +179,16 @@ onMounted(() => {
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s ease;
+    animation: fade-in-up 0.5s ease forwards;
+    animation-delay: calc(0.1s * var(--idx));
+
+    &:hover {
+      border-color: #007bff;
+    }
+
+    &.selected {
+      border-color: #007bff;
+    }
 
     input,
     label {
@@ -186,15 +196,7 @@ onMounted(() => {
     }
   }
 
-  &__option:hover {
-    border-color: #007bff;
-  }
-
-  &__option.selected {
-    border-color: #007bff;
-  }
-
-  @keyframes fadeInUp {
+  @keyframes fade-in-up {
     from {
       opacity: 0;
       transform: translateY(20px);
@@ -204,11 +206,6 @@ onMounted(() => {
       opacity: 1;
       transform: translateY(0);
     }
-  }
-
-  &__option {
-    animation: fadeInUp 0.5s ease forwards;
-    animation-delay: calc(0.1s * var(--idx));
   }
 
   &__price {

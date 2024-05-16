@@ -121,8 +121,7 @@ onMounted(() => {
     flex-direction: column;
     align-items: center;
     max-height: 500px;
-    overflow-x: hidden;
-    overflow-y: auto;
+    overflow: hidden auto;
     scrollbar-width: thin;
     scrollbar-color: #007bff transparent;
 
@@ -154,7 +153,7 @@ onMounted(() => {
     border: 1px solid #ccc;
     border-radius: 8px;
     background-color: #f8f8f8;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 10%);
     width: 400px;
   }
 

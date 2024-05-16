@@ -26,7 +26,7 @@ defineProps({
   transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 90%);
   z-index: 9999;
 
   &__spinner {
@@ -63,7 +63,6 @@ defineProps({
 }
 
 @keyframes double-bounce {
-
   0%,
   100% {
     transform: scale(0);

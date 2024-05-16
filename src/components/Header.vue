@@ -10,30 +10,33 @@
 </template>
 
 <script setup lang="ts">
+import homeImg from '@/public/img/home.png';
+import shopping_cart from '@/public/img/shopping_cart.png';
 import { useCartStore } from '@/stores/cart';
 import { ref, watch } from 'vue';
 import { useRouter } from 'vue-router';
-import homeImg from '@/public/img/home.png'
-import shopping_cart from '@/public/img/shopping_cart.png'
+
 const cartStore = useCartStore();
 const cartItems = cartStore.items;
-const cartItemCount = ref(cartItems.length)
-const router = useRouter()
-const isCartAdded = ref(false)
+const cartItemCount = ref(cartItems.length);
+const router = useRouter();
+const isCartAdded = ref(false);
 
 const goToHome = () => {
-  router.push('/')
-}
+  router.push('/');
+};
 
 const goToShoppingCart = () => {
-  router.push('/cart')
-}
+  router.push('/cart');
+};
+
 watch(
   () => cartStore.items.length,
   () => {
     cartItemCount.value = cartStore.items.length;
   }
-)
+);
+
 watch(
   () => cartStore.items,
   () => {
@@ -44,7 +47,6 @@ watch(
   },
   { deep: true }
 );
-
 </script>
 
 <style scoped lang="scss">
@@ -59,7 +61,7 @@ watch(
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px hsla(0deg, 0%, 0%, 10%);
 
   &__cartContainer {
     position: relative;
